@@ -2,25 +2,24 @@ package com.joe.restservice.dto;
 
 import com.joe.restservice.domain.Book;
 import com.joe.restservice.util.CusotmBeanUtils;
+import org.hibernate.validator.constraints.Length;
 import org.springframework.beans.BeanUtils;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 public class BookDTO {
 
-    private Long id;
+    @NotBlank
     private String author;
+    @Length(max = 20)
     private String description;
+    @NotBlank
     private String name;
+    @NotNull
     private Integer status;
 
     public BookDTO() {
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getAuthor() {
@@ -60,6 +59,9 @@ public class BookDTO {
     public void convertToBook(Book book){
         new BookCovert().convert(this,book);
     }
+    public Book convertToBook(){
+        return new BookCovert().convert(this);
+    }
 
     private class BookCovert implements Convert<BookDTO, Book>{
 
@@ -76,7 +78,10 @@ public class BookDTO {
 
         @Override
         public Book convert(BookDTO bookDTO) {
-            return null;
+            Book book = new Book();
+            //      於BeanUtils.copyProperties(Object source, Object target,String 指定不copy的屬性值)，第三位參數可選忽略值
+            BeanUtils.copyProperties(bookDTO,book);
+            return book;
         }
     }
 }
