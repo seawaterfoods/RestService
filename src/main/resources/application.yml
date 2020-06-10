@@ -1,0 +1,19 @@
+spring:
+  thymeleaf:
+    mode: HTML
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/spring_boot?serverTimezone=GMT%2B8&useUnicode=true&characterEncodeing=utf-8
+    username: root
+    password: 1234
+  # 設定輸入設定
+  #  validate 加载 Hibernate，验證創建数據库表结購
+  #  create 每次加载 Hibernate，重新創建數據库表結構，这就是導致數據庫表的数具丢失的原因。
+  #  create-drop 加载 Hibernate時，創建，退出是删除表結構
+  #  update 加载 Hibernate 自動更新數據库结構
+  jpa:
+    hibernate:
+      ddl-auto: update
+    #  顯示出SQL語句
+    show-sql: true

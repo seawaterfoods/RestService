@@ -1,7 +1,9 @@
 package com.joe.restservice.api;
 
 import com.joe.restservice.domain.Book;
+import com.joe.restservice.dto.BookDTO;
 import com.joe.restservice.service.BookService;
+import com.joe.restservice.util.CusotmBeanUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -9,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/api/v1")
@@ -31,18 +33,19 @@ public class BookApi {
     }
 
     @PostMapping("/books")
-    public ResponseEntity<?> saveBook(Book book){
+    public ResponseEntity<?> saveBook(@RequestBody Book book){
         Book book1 = bookService.saveBook(book);
         return new ResponseEntity<Object>(book1,HttpStatus.CREATED);
     }
 
     @PutMapping("/books/{id}")
-    public ResponseEntity<?> updateBook(@PathVariable Long id,Book book){
+    public ResponseEntity<?> updateBook(@PathVariable Long id,@RequestBody BookDTO bookDTO){
         Book currentBook = bookService.getBookById(id);
-        BeanUtils.copyProperties(book,currentBook);
+        bookDTO.convertToBook(currentBook);
         Book book1 = bookService.updateBook(currentBook);
         return new ResponseEntity<Object>(book1,HttpStatus.OK);
     }
+
 
     @DeleteMapping("/books/{id}")
     public ResponseEntity<?> deleteBook(@PathVariable Long id){
@@ -55,4 +58,6 @@ public class BookApi {
         bookService.findAllBooks();
         return new ResponseEntity<Object>(HttpStatus.NO_CONTENT);
     }
+
+
 }
