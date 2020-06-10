@@ -10,4 +10,8 @@ public class InvalidRequestException extends RuntimeException{
         super(message);
         this.errors = errors;
     }
+
+    public Errors getErrors() {
+        return errors;
+    }
 }
