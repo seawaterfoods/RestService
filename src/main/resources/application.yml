@@ -17,3 +17,11 @@ spring:
       ddl-auto: update
     #  顯示出SQL語句
     show-sql: true
+debug: true
+
+#logging:
+#  level:
+#    root: info
+#    com.joe: debug
+#  file:
+#    name: log/my.log

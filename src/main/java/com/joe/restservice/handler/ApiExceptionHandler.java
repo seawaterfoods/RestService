@@ -70,7 +70,7 @@ public class ApiExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseEntity<?> handleException(Exception e){
-//        其餘錯誤都回傳INTERNAL_SERVER_ERROR
+//        其餘錯誤都塞入回傳至INTERNAL_SERVER_ERROR
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
