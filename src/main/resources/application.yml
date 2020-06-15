@@ -18,4 +18,4 @@ spring:
     #  顯示出SQL語句
     show-sql: true
   profiles:
-    active: pro
+    active: dev

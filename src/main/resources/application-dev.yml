@@ -2,3 +2,6 @@ logging:
   level:
     root: debug
     com.joe: debug
+  file:
+    name: devlog/my.log
+#    path: devlog
