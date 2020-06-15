@@ -3,7 +3,7 @@ spring:
     mode: HTML
 
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/spring_boot?serverTimezone=GMT%2B8&useUnicode=true&characterEncodeing=utf-8
     username: root
     password: 1234
@@ -17,11 +17,5 @@ spring:
       ddl-auto: update
     #  顯示出SQL語句
     show-sql: true
-debug: true
-
-#logging:
-#  level:
-#    root: info
-#    com.joe: debug
-#  file:
-#    name: log/my.log
+  profiles:
+    active: pro
