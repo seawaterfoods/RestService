@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration>
+    <!--包含Spring boot對logback日誌的默認配置-->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml" />
+    <property name="LOG_FILE" value="${LOG_FILE:-${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}/XXX.log}"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml" />
+
+    <!--重寫Spring Boot框架org/springframework/boot/logging/logback/console-appender.xml配置-->
+    <appender name="FILE"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+    <!--    ${FILE_LOG_PATTERN}日誌文件輸出格式        -->
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+<!--        日誌文件存放目錄springboot2.3.0改成有設路徑時，便會去覆蓋fileNamePattern名稱
+        <file>${LOG_FILE}</file>-->
+<!--   VVV  日誌文件切割方式  VVV   -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+<!--            ${LOG_FILE}日誌名.%d{yyyy-MM-dd}日期.%i流水編號-->
+            <fileNamePattern>${LOG_FILE}.%d{yyyy-MM-dd}.%i</fileNamePattern>
+            <!--保留歷史日誌一個月的時間-->
+            <maxHistory>30</maxHistory>
+            <!--
+            Spring Boot默認情況下，日誌文件10M時，會切分日誌文件，這樣設置日誌文建會在100M時切分日誌
+            -->
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>100MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+<!--    日誌默認級別  -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
+
+<!--    1.繼承Spring boot logback設置(可以在appliaction.yml或者application.properties設置logging.*屬性)
+        2.重寫了默認配置，設置日誌文件大小在100MB時，按照日期切分日誌，切分後目錄如下:
+
+            my.2020-06-15.0     100MB
+            my.2020-06-15.1     100MB
+            my.2020-06-15.2     10MB
+            my.2020-06-16.0     33MB
+            my.2020-06-17.0     12MB
+            ......
+
+        -->

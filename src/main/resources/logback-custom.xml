@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="60 seconds" debug="false">
+<!--    可以用來區分不同應用程式的日誌紀錄   -->
+    <contextName>logback</contextName>
+
+<!--    設置日誌文件保存目錄和名字-->
+    <property name="log.path" value="D:/SpringLearn/RestService/prolog/custom.log"/>
+
+<!--    輸出到控制台 設置-->
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+<!--        過濾掉ERROR級別以下的日誌-->
+<!--        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">-->
+<!--            <level>ERROR</level>-->
+<!--        </filter>-->
+
+<!--        控制台輸出日誌格式設置-->
+<!--        %d{HH: mm:ss.SSS} 日誌輸出時間
+            %thread 進程名字
+            %-5level 日誌級別，並且使用5個字符靠左對齊
+            %msg%n 日誌輸出信息
+            %n 換行符號
+-->
+        <encoder>
+            <pattern> %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n </pattern>
+        </encoder>
+    </appender>
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+<!--        <file>${log.path}</file>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+<!--            定義日誌切分方式，把每一天的日誌歸檔一個文件夾-->
+            <fileNamePattern>D:/SpringLearn/RestService/prolog/logback.%d{yyyy-MM-dd}.log</fileNamePattern>
+<!--            保留最近30天日誌-->
+            <maxHistory>30</maxHistory>
+<!--            指定所有的日誌總文檔上限大小，設置200M的話，那就會刪除舊的日誌，防止日誌塞滿硬碟-->
+            <totalSizeCap>200MB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern> %d{HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n </pattern>
+        </encoder>
+    </appender>
+
+<!--    指定基礎的日誌輸出級別-->
+    <root level="debug">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+<!--    指定com.joe.restservice.api.LogTestApi類日誌級別為WARN和大於WARM的日誌信息由名為console的appender處理additivity="false"不再向上級root傳遞打印信息-->
+    <logger name="com.joe.restservice.api.LogTestApi" level="WARN" additivity="false">
+        <appender-ref ref="console"/>
+    </logger>
+
+<!--    繼承自上級日誌root設置，上級日誌打印一次
+        本身不打印任何日誌
+        -->
+<!--    <logger name="com.joe.restservice.api.BookApi"/>-->
+
+<!--    多環境配置-->
+    <springProfile name="develop">
+        <logger name="com.joe.restservice.api.LogTestApi" level="debug"/>
+    </springProfile>
+
+<!--    生產環境-->
+    <springProfile name="production">
+        <logger name="com.joe.restservice.api.LogTestApi" level="ERROR"/>
+    </springProfile>
+</configuration>

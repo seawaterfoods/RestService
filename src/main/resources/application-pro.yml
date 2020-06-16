@@ -3,4 +3,4 @@ logging:
     root: error
     com.joe: warn
   file:
-    name: prolog/pro.log
+    path: prolog
