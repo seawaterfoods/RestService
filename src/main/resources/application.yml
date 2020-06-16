@@ -18,7 +18,7 @@ spring:
     #  顯示出SQL語句
     show-sql: true
   profiles:
-    active: production
+    active: dev
 
-logging:
-  config: classpath:logback-custom.xml
+#logging:
+#  config: classpath:logback-custom.xml

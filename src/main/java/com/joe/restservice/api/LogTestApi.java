@@ -15,12 +15,14 @@ public class LogTestApi {
 
         String name = "Joe";
         String email = "1900849@system.com";
-        logger.info("info --- log");
-        logger.warn("wrn --- log");
-        logger.error("error --- log");
-        logger.debug("debug --- log");
-        logger.trace("trace --- log");
-        logger.info("name : {}, email : {}", name,email);
+
+        logger.info("----------log-----------");
+//        logger.info("info --- log");
+//        logger.warn("wrn --- log");
+//        logger.error("error --- log");
+//        logger.debug("debug --- log");
+//        logger.trace("trace --- log");
+//        logger.info("name : {}, email : {}", name,email);
 
 
         return "logtest";

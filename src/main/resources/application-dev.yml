@@ -1,11 +1,11 @@
 logging:
 #  指定日誌輸出級別
   level:
-    root: debug
+    root: info
     com.joe: debug
   file:
 #    path: devlog
-    name: devlog/RsetServiceLOG.log
+    name: devlog/RsetService.log
 
 #    自定義輸出格式
 #    console: '%d{HH:mm:ss.SSS}'
