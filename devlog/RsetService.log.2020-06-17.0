@@ -1,0 +1,221 @@
+2020-06-17 11:48:01.041  INFO 6196 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 6196 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 11:48:01.046 DEBUG 6196 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 11:48:01.047  INFO 6196 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 11:48:03.092  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 11:48:03.093  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 11:48:03.174  INFO 6196 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 11:48:03.175  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75ms. Found 0 JDBC repository interfaces.
+2020-06-17 11:48:03.198  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 11:48:03.198  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 11:48:03.244  INFO 6196 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39ms. Found 1 JPA repository interfaces.
+2020-06-17 11:48:04.754  INFO 6196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 11:48:04.770  INFO 6196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 11:48:04.771  INFO 6196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 11:48:04.981  INFO 6196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 11:48:04.982  INFO 6196 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3707 ms
+2020-06-17 11:48:05.521  INFO 6196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 11:48:05.633  INFO 6196 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 11:48:05.755  INFO 6196 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 11:48:05.843  WARN 6196 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 11:48:06.117  INFO 6196 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 11:48:06.290  INFO 6196 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 11:48:06.739  INFO 6196 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 11:48:06.776  INFO 6196 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 11:48:08.097  INFO 6196 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 11:48:08.109  INFO 6196 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 11:48:09.247  WARN 6196 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 11:48:09.653  INFO 6196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 11:48:09.655  INFO 6196 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 11:48:09.735  INFO 6196 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 11:48:09.758  INFO 6196 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 10.42 seconds (JVM running for 16.7)
+2020-06-17 11:48:24.924  INFO 6196 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 11:48:24.924  INFO 6196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 11:48:24.952  INFO 6196 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-06-17 11:49:06.531  INFO 6196 --- [http-nio-8080-exec-4] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/1', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[1]}
+2020-06-17 11:49:06.858  INFO 6196 --- [http-nio-8080-exec-4] com.joe.restservice.aspect.LogAspect     :     Return -------- :內容<200 OK OK,com.joe.restservice.domain.Book@5ba50049,[]>
+2020-06-17 11:52:07.963  INFO 11432 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 11432 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 11:52:07.968 DEBUG 11432 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 11:52:07.968  INFO 11432 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 11:52:10.755  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 11:52:10.757  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 11:52:10.842  INFO 11432 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 11:52:10.843  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 0 JDBC repository interfaces.
+2020-06-17 11:52:10.864  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 11:52:10.864  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 11:52:10.920  INFO 11432 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48ms. Found 1 JPA repository interfaces.
+2020-06-17 11:52:12.376  INFO 11432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 11:52:12.392  INFO 11432 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 11:52:12.394  INFO 11432 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 11:52:12.671  INFO 11432 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 11:52:12.672  INFO 11432 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4419 ms
+2020-06-17 11:52:13.131  INFO 11432 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 11:52:13.230  INFO 11432 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 11:52:13.348  INFO 11432 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 11:52:13.433  WARN 11432 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 11:52:13.725  INFO 11432 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 11:52:13.874  INFO 11432 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 11:52:14.078  INFO 11432 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 11:52:14.106  INFO 11432 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 11:52:15.214  INFO 11432 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 11:52:15.230  INFO 11432 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 11:52:16.545  WARN 11432 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 11:52:17.109  INFO 11432 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 11:52:17.111  INFO 11432 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 11:52:17.234  INFO 11432 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 11:52:17.251  INFO 11432 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 10.533 seconds (JVM running for 13.91)
+2020-06-17 11:52:45.686  INFO 11432 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 11:52:45.687  INFO 11432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 11:52:45.715  INFO 11432 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 27 ms
+2020-06-17 11:52:45.785  INFO 11432 --- [http-nio-8080-exec-1] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/1', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[1]}
+2020-06-17 11:52:45.901  INFO 11432 --- [http-nio-8080-exec-1] com.joe.restservice.aspect.LogAspect     :     Return -------- :內容<200 OK OK,Book{id=1, author='賣糕人', description='好書', name='哲學哲學雞蛋糕', status=0},[]>
+2020-06-17 11:53:01.779  INFO 11432 --- [http-nio-8080-exec-3] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/0', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[0]}
+2020-06-17 13:39:46.100  INFO 5476 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 5476 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 13:39:46.111 DEBUG 5476 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 13:39:46.111  INFO 5476 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 13:39:47.319  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:39:47.320  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 13:39:47.365  INFO 5476 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 13:39:47.366  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JDBC repository interfaces.
+2020-06-17 13:39:47.380  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:39:47.381  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 13:39:47.422  INFO 5476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 1 JPA repository interfaces.
+2020-06-17 13:39:48.338  INFO 5476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 13:39:48.350  INFO 5476 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 13:39:48.350  INFO 5476 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 13:39:48.512  INFO 5476 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 13:39:48.512  INFO 5476 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2118 ms
+2020-06-17 13:39:48.832  INFO 5476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 13:39:48.885  INFO 5476 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 13:39:48.946  INFO 5476 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 13:39:49.016  WARN 5476 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 13:39:49.145  INFO 5476 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 13:39:49.269  INFO 5476 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 13:39:49.406  INFO 5476 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 13:39:49.426  INFO 5476 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 13:39:50.217  INFO 5476 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 13:39:50.227  INFO 5476 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 13:39:50.915  WARN 5476 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 13:39:51.257  INFO 5476 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 13:39:51.258  INFO 5476 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 13:39:51.328  INFO 5476 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 13:39:51.338  INFO 5476 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 6.325 seconds (JVM running for 8.87)
+2020-06-17 13:40:03.413  INFO 5476 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 13:40:03.413  INFO 5476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 13:40:03.426  INFO 5476 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-06-17 13:40:03.471  INFO 5476 --- [http-nio-8080-exec-1] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/0', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[0]}
+2020-06-17 13:40:03.541  WARN 5476 --- [http-nio-8080-exec-1] c.j.r.handler.ApiExceptionHandler        : Return ------ <404 NOT_FOUND Not Found,com.joe.restservice.resource.ErrorResource@707a8584,[]>
+2020-06-17 13:41:51.934  INFO 7260 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 7260 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 13:41:51.937 DEBUG 7260 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 13:41:51.938  INFO 7260 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 13:41:52.847  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:41:52.848  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 13:41:52.888  INFO 7260 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 13:41:52.889  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36ms. Found 0 JDBC repository interfaces.
+2020-06-17 13:41:52.898  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 13:41:52.898  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 13:41:52.933  INFO 7260 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30ms. Found 1 JPA repository interfaces.
+2020-06-17 13:41:53.717  INFO 7260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 13:41:53.726  INFO 7260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 13:41:53.726  INFO 7260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 13:41:53.872  INFO 7260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 13:41:53.872  INFO 7260 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1836 ms
+2020-06-17 13:41:54.197  INFO 7260 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 13:41:54.253  INFO 7260 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 13:41:54.308  INFO 7260 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 13:41:54.362  WARN 7260 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 13:41:54.483  INFO 7260 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 13:41:54.590  INFO 7260 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 13:41:54.711  INFO 7260 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 13:41:54.734  INFO 7260 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 13:41:55.417  INFO 7260 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 13:41:55.425  INFO 7260 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 13:41:56.104  WARN 7260 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 13:41:56.433  INFO 7260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 13:41:56.435  INFO 7260 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 13:41:56.499  INFO 7260 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 13:41:56.508  INFO 7260 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 5.683 seconds (JVM running for 8.089)
+2020-06-17 13:42:04.534  INFO 7260 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 13:42:04.534  INFO 7260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 13:42:04.547  INFO 7260 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-06-17 13:42:04.590  INFO 7260 --- [http-nio-8080-exec-1] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/0', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[0]}
+2020-06-17 13:42:04.655  WARN 7260 --- [http-nio-8080-exec-1] c.j.r.handler.ApiExceptionHandler        : Return ------ <404 NOT_FOUND Not Found,ErrorResource{message='boo by id 0'},[]>
+2020-06-17 14:13:27.316  INFO 11496 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 11496 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 14:13:27.319 DEBUG 11496 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 14:13:27.320  INFO 11496 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 14:13:28.188  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:13:28.189  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 14:13:28.227  INFO 11496 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 14:13:28.228  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34ms. Found 0 JDBC repository interfaces.
+2020-06-17 14:13:28.236  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:13:28.237  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 14:13:28.270  INFO 11496 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28ms. Found 1 JPA repository interfaces.
+2020-06-17 14:13:29.056  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 14:13:29.066  INFO 11496 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 14:13:29.067  INFO 11496 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 14:13:29.210  INFO 11496 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 14:13:29.210  INFO 11496 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1825 ms
+2020-06-17 14:13:29.484  INFO 11496 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 14:13:29.532  INFO 11496 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 14:13:29.589  INFO 11496 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 14:13:29.657  WARN 11496 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 14:13:29.767  INFO 11496 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 14:13:29.896  INFO 11496 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 14:13:30.046  INFO 11496 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 14:13:30.066  INFO 11496 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 14:13:30.750  INFO 11496 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 14:13:30.758  INFO 11496 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 14:13:31.404  WARN 11496 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 14:13:31.687  INFO 11496 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 14:13:31.689  INFO 11496 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 14:13:31.752  INFO 11496 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 14:13:31.761  INFO 11496 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 5.64 seconds (JVM running for 8.334)
+2020-06-17 14:14:42.793  INFO 12300 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 12300 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 14:14:42.797 DEBUG 12300 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 14:14:42.797  INFO 12300 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 14:14:43.656  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:14:43.657  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 14:14:43.699  INFO 12300 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 14:14:43.699  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 0 JDBC repository interfaces.
+2020-06-17 14:14:43.708  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:14:43.708  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 14:14:43.742  INFO 12300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29ms. Found 1 JPA repository interfaces.
+2020-06-17 14:14:44.829  INFO 12300 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 14:14:44.841  INFO 12300 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 14:14:44.842  INFO 12300 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 14:14:45.044  INFO 12300 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 14:14:45.044  INFO 12300 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2175 ms
+2020-06-17 14:15:31.333  INFO 12944 --- [main] c.j.restservice.RestserviceApplication   : Starting RestserviceApplication on 19008491Joe with PID 12944 (D:\SpringLearn\RestService\target\classes started by Systex in D:\SpringLearn\RestService)
+2020-06-17 14:15:31.339 DEBUG 12944 --- [main] c.j.restservice.RestserviceApplication   : Running with Spring Boot v2.3.0.RELEASE, Spring v5.2.6.RELEASE
+2020-06-17 14:15:31.340  INFO 12944 --- [main] c.j.restservice.RestserviceApplication   : The following profiles are active: dev
+2020-06-17 14:15:32.494  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:15:32.495  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2020-06-17 14:15:32.539  INFO 12944 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.joe.restservice.domain.BookRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2020-06-17 14:15:32.540  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41ms. Found 0 JDBC repository interfaces.
+2020-06-17 14:15:32.550  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-06-17 14:15:32.550  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-06-17 14:15:32.586  INFO 12944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31ms. Found 1 JPA repository interfaces.
+2020-06-17 14:15:33.562  INFO 12944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-06-17 14:15:33.574  INFO 12944 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-06-17 14:15:33.575  INFO 12944 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.35]
+2020-06-17 14:15:33.755  INFO 12944 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-06-17 14:15:33.756  INFO 12944 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2135 ms
+2020-06-17 14:15:34.167  INFO 12944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-17 14:15:34.221  INFO 12944 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-17 14:15:34.287  INFO 12944 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-17 14:15:34.472  WARN 12944 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-17 14:15:34.552  INFO 12944 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-17 14:15:34.758  INFO 12944 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-06-17 14:15:34.933  INFO 12944 --- [task-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-06-17 14:15:34.958  INFO 12944 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+2020-06-17 14:15:35.849  INFO 12944 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-17 14:15:35.859  INFO 12944 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-17 14:15:36.716  WARN 12944 --- [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-06-17 14:15:37.084  INFO 12944 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-17 14:15:37.086  INFO 12944 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-06-17 14:15:37.172  INFO 12944 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-06-17 14:15:37.184  INFO 12944 --- [main] c.j.restservice.RestserviceApplication   : Started RestserviceApplication in 7.039 seconds (JVM running for 9.848)
+2020-06-17 14:15:55.630  INFO 12944 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-17 14:15:55.630  INFO 12944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-06-17 14:15:55.645  INFO 12944 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-06-17 14:15:55.689  INFO 12944 --- [http-nio-8080-exec-1] com.joe.restservice.aspect.LogAspect     :     Request   ----- PequestLog{url='http://127.0.0.1:8080/api/v1/books/0', ip='127.0.0.1', classMethod='com.joe.restservice.api.BookApi.getBook', args=[0]}
+2020-06-17 14:15:55.759  WARN 12944 --- [http-nio-8080-exec-1] c.j.r.handler.ApiExceptionHandler        : Return ------ <404 NOT_FOUND Not Found,ErrorResource{message='boo by id 0 not found'},[]>

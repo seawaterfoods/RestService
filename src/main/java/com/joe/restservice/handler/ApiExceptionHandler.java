@@ -5,6 +5,8 @@ import com.joe.restservice.exception.NotFoundException;
 import com.joe.restservice.resource.ErrorResource;
 import com.joe.restservice.resource.FieldResource;
 import com.joe.restservice.resource.InvalidErrorResource;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.Errors;
@@ -20,6 +22,8 @@ import java.util.List;
 @RestControllerAdvice
 public class ApiExceptionHandler {
 
+
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
     /*
      * 異常處理
      * 處理資源找不到。
@@ -29,8 +33,10 @@ public class ApiExceptionHandler {
     @ResponseBody
     public ResponseEntity<?> handleNotFound(RuntimeException e){
         ErrorResource errorResource = new ErrorResource(e.getMessage());
-//        返回errorResource跟404
-        return new ResponseEntity<>(errorResource, HttpStatus.NOT_FOUND);
+        ResponseEntity result =new ResponseEntity<Object>(errorResource, HttpStatus.NOT_FOUND);
+        logger.warn("Return ------ {}",result);
+        //        返回errorResource跟404
+        return result;
     }
     /*
      * 異常處理
@@ -59,7 +65,9 @@ public class ApiExceptionHandler {
         }
 //      將fieldResource跟錯誤訊息塞入InvalidErrorResource中傳出
         InvalidErrorResource ier = new InvalidErrorResource(e.getMessage(),fieldResources);
-        return new ResponseEntity<Object>(ier, HttpStatus.BAD_REQUEST);
+        ResponseEntity result =new ResponseEntity<Object>(ier, HttpStatus.BAD_REQUEST);
+        logger.warn("Return ------ {}",result);
+        return result;
     }
 
     /*
@@ -70,6 +78,7 @@ public class ApiExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseEntity<?> handleException(Exception e){
+        logger.error("Error : ---- {}",e);
 //        其餘錯誤都塞入回傳至INTERNAL_SERVER_ERROR
         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }

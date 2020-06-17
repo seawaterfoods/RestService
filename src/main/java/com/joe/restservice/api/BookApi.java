@@ -38,7 +38,7 @@ public class BookApi {
         Book book = bookService.getBookById(id);
 
         if (book==null){
-            throw new NotFoundException(String.format("boo by id %s",id));
+            throw new NotFoundException(String.format("boo by id %s not found",id));
         }
         return new ResponseEntity<Object>(book,HttpStatus.OK);
     }
@@ -46,7 +46,7 @@ public class BookApi {
     @PostMapping("/books")
     public ResponseEntity<?> saveBook(@Valid @RequestBody BookDTO bookDTO, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
-            throw new InvalidRequestException("Ivliad parameter",bindingResult);
+            throw new InvalidRequestException("Invalid parameter",bindingResult);
         }
 
         Book book1 = bookService.saveBook(bookDTO.convertToBook());
@@ -59,10 +59,10 @@ public class BookApi {
 
         Book currentBook = bookService.getBookById(id);
         if (currentBook==null){
-            throw new NotFoundException(String.format("boo by id %s",id));
+            throw new NotFoundException(String.format("boo by id %s not found",id));
         }
         if (bindingResult.hasErrors()){
-            throw new InvalidRequestException("Ivliad parameter",bindingResult);
+            throw new InvalidRequestException("Invalid parameter",bindingResult);
         }
         bookDTO.convertToBook(currentBook);
         Book book1 = bookService.updateBook(currentBook);

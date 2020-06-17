@@ -12,5 +12,10 @@ public class ErrorResource {
         return message;
     }
 
-
+    @Override
+    public String toString() {
+        return "ErrorResource{" +
+                "message='" + message + '\'' +
+                '}';
+    }
 }
